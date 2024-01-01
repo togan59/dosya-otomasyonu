@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="320.0" style="-fx-background-color: #DEDEDE;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dosyaotomasyonu.KullaniciEkleUI">
+   <children>
+      <Label layoutX="142.0" layoutY="68.0" prefHeight="16.0" prefWidth="116.0" text="YENİ KULLANICI" textFill="#727272">
+         <font>
+            <Font name="FreeSans Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kullaniciAdiGiris" layoutX="58.0" layoutY="185.0" prefHeight="26.0" prefWidth="200.0" promptText="Kullanıcı Adı" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="yeniSifreGiris" layoutX="58.0" layoutY="212.0" prefHeight="26.0" prefWidth="200.0" promptText="Şifre" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="adGiris" layoutX="58.0" layoutY="129.0" prefHeight="26.0" prefWidth="200.0" promptText="Ad" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="soyadGiris" layoutX="58.0" layoutY="157.0" prefHeight="26.0" prefWidth="200.0" promptText="Soyad" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="epostaGiris" layoutX="58.0" layoutY="240.0" prefHeight="26.0" prefWidth="200.0" promptText="E-Posta" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="telefonGiris" layoutX="58.0" layoutY="268.0" prefHeight="26.0" prefWidth="200.0" promptText="Telefon" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="72.0" fitWidth="96.0" layoutX="58.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/avatar.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="kaydet_buton" layoutX="178.0" layoutY="304.0" onAction="#kaydet" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #727272;" text="Kaydet" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="kaydet_hata" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="342.0" prefHeight="25.0" prefWidth="300.0">
+         <font>
+            <Font name="FreeSans" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

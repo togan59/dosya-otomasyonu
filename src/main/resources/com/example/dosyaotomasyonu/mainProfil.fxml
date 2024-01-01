@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="680.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dosyaotomasyonu.AnaEkranProfil">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="100.0" style="-fx-background-color: #181818;">
+         <children>
+            <Button fx:id="arsivlerButon" layoutX="26.0" layoutY="118.0" mnemonicParsing="false" onAction="#arsivler_tiklandi" style="-fx-background-color: #181818;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/archives.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="24.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #181818;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/inbox.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="229.0" mnemonicParsing="false" style="-fx-background-color: #181818;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/tasks.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="38.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/settings.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="359.0" textFill="WHITE">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="profilButon" layoutX="23.0" layoutY="27.0" mnemonicParsing="false" onAction="#profil_tiklandi" style="-fx-background-color: #181818;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/avatar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="163.0" layoutY="35.0" text="Kullanıcı Bilgileri" textFill="#ff8e8e">
+         <font>
+            <Font name="FreeSans Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="171.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/avatar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="280.0" layoutY="100.0" prefHeight="25.0" prefWidth="120.0" text="Ad" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="adLabel" layoutX="280.0" layoutY="125.0" prefHeight="25.0" prefWidth="120.0" text="Hüseyin" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="100.0" prefHeight="25.0" prefWidth="120.0" text="Soyad" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="soyadLabel" layoutX="410.0" layoutY="125.0" prefHeight="25.0" prefWidth="120.0" text="Karakaya" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="162.0" prefHeight="25.0" prefWidth="120.0" text="Kullanıcı Adı" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="kullaniciAdiLabel" layoutX="280.0" layoutY="187.0" prefHeight="25.0" prefWidth="250.0" text="huseyinkarakaya23" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="243.0" prefHeight="25.0" prefWidth="120.0" text="E-Posta" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="epostaLabel" layoutX="279.0" layoutY="265.0" prefHeight="25.0" prefWidth="250.0" text="huseyinkarakaya23@mail.com" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="221.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="279.0" layoutY="297.0" prefHeight="25.0" prefWidth="120.0" text="Telefon" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="telefonLabel" layoutX="279.0" layoutY="319.0" prefHeight="25.0" prefWidth="250.0" text="530 123 4567" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="221.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/phone.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dosyaotomasyonu.YoneticiSecim">
+   <children>
+      <Label layoutX="116.0" layoutY="39.0" text="HOŞGELDİNİZ" textFill="WHITE">
+         <font>
+            <Font name="FreeSans Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="anaEkran" contentDisplay="TOP" layoutX="79.0" layoutY="122.0" mnemonicParsing="false" onAction="#anaEkran_tiklandi" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: #333333;" text="Ana Ekran" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/main.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="yonetim" contentDisplay="TOP" layoutX="211.0" layoutY="122.0" mnemonicParsing="false" onAction="#yonetim_tiklandi" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: #333333;" text="Yönetim" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/management.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="63.0" layoutY="77.0" text="Lütfen devam etmek istediğiniz paneli seçiniz" textFill="WHITE">
+         <font>
+            <Font name="FreeSans" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

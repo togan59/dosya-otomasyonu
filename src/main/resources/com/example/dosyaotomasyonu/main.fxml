@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="680.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dosyaotomasyonu.AnaEkranUI">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #181818;">
+         <children>
+            <Button fx:id="arsivlerButon" layoutX="26.0" layoutY="118.0" mnemonicParsing="false" onAction="#arsivler_tiklandi" style="-fx-background-color: #181818;" text="  Arşivler" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/archives.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="24.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #181818;" text="  E-Posta" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/inbox.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="229.0" mnemonicParsing="false" style="-fx-background-color: #181818;" text="  Görevler" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/tasks.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="38.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/settings.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="359.0" text="Ayarlar" textFill="WHITE">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="profilButon" layoutX="23.0" layoutY="27.0" mnemonicParsing="false" onAction="#profil_tiklandi" style="-fx-background-color: #181818;" text=" Profil" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/avatar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="340.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/main.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
