@@ -64,6 +64,7 @@ public class AnaEkranArsivler extends AnaEkranUI {
         for (Arsiv arsiv : AktifKullanici.returnArsivler()) {
             if (arsiv.getArsivAdi().equals(arsivListe.getSelectionModel().getSelectedItem())) {
                 arsiv.belgeEkle(belge);
+                belgeListesi.add(belge.getBelgeAdi());
             }
         }
     }

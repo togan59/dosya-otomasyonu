@@ -3,7 +3,7 @@ package com.example.dosyaotomasyonu;
 import java.util.ArrayList;
 
 public class Arsivler extends ArrayList<Arsiv> {
-private static Arsivler instance = null;
+    private static Arsivler instance = null;
 
     private Arsivler() {
         super();

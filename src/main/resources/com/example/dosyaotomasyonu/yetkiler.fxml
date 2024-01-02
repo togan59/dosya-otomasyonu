@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dosyaotomasyonu.YetkilerUI">
    <children>
-      <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="25.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icon/yetki-kaldır.png" />
          </image>
@@ -20,7 +20,7 @@
          <font>
             <Font name="FreeSans" size="14.0" />
          </font></Button>
-      <Label layoutX="79.0" layoutY="36.0" text="Arşiv Yetkileri">
+      <Label layoutX="79.0" layoutY="32.0" text="Arşiv Yetkileri">
          <font>
             <Font name="FreeSans Bold" size="16.0" />
          </font>

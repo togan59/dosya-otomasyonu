@@ -59,8 +59,8 @@ public class YonetimUI {
 
     @FXML
     void arsivSil(ActionEvent event) {
-        arsivListe.remove(secilenArsiv.getArsivAdi());
         Arsivler.getInstance().arsivSil(secilenArsiv);
+        arsivListe.remove(secilenArsiv.getArsivAdi());
     }
 
     @FXML
@@ -75,8 +75,8 @@ public class YonetimUI {
 
     @FXML
     void kullaniciSil(ActionEvent event) {
-        kullaniciListe.remove(secilenKullanici.getKullaniciAdi());
         KullaniciListesi.getInstance().kullaniciSil(secilenKullanici);
+        kullaniciListe.remove(secilenKullanici.getKullaniciAdi());
     }
 
     @FXML

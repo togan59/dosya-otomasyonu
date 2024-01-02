@@ -57,24 +57,25 @@ public class Giris {
     private KullaniciListesi kullanicilar = KullaniciListesi.getInstance();
     private Arsivler arsivler = Arsivler.getInstance();
 
+    private Belgeler belgeler = Belgeler.getInstance();
+
     @FXML
     public void initialize() {
-
         // Kullanıcılar
         Calisan calisan1 = new Calisan("Kadir", "Atabay", "sqlcikadir", "sql23", "sqlci23@mail.com", "5123456723", new ArrayList<Arsiv>());
         Calisan calisan2 = new Calisan("Tolga", "AI", "tensorTolga", "taitai", "ccctolgaccc@mail.com", "5123456707", new ArrayList<Arsiv>());
-        Yonetici yonetici = new Yonetici("Hamza", "Bey", "HamzaBey", "java", "javabenimisim@mail.com", "5121212121");
+        Yonetici yonetici = new Yonetici("Hamza", "Gündoğdu", "HamzaBey", "java", "javabenimisim@mail.com", "5121212121");
 
         // Belgeler
         Belge belge1 = new Belge("src/main/resources/belgeler/dilekce.doc");
         Belge belge2 = new Belge("src/main/resources/belgeler/duyuru.pdf");
-        Belge belge3 = new Belge("src/main/resources/belgeler/gelirler.xlsx");
-        Belge belge4 = new Belge("src/main/resources/belgeler/giderler.xlsx");
+        Belge belge3 = new Belge("src/main/resources/belgeler/gelirler.xls");
+        Belge belge4 = new Belge("src/main/resources/belgeler/giderler.xls");
         Belge belge5 = new Belge("src/main/resources/belgeler/intro.mp4");
         Belge belge6 = new Belge("src/main/resources/belgeler/konusma.doc");
         Belge belge7 = new Belge("src/main/resources/belgeler/logo.png");
         Belge belge8 = new Belge("src/main/resources/belgeler/rapor.doc");
-        Belge belge9 = new Belge("src/main/resources/belgeler/rehber.pdf");
+        Belge belge9 = new Belge("src/main/resources/belgeler/web.js");
         Belge belge10 = new Belge("src/main/resources/belgeler/sunum.ppt");
 
         // Arşivler
@@ -105,6 +106,7 @@ public class Giris {
         kullanicilar.add(calisan1);
         kullanicilar.add(calisan2);
         kullanicilar.add(yonetici);
+
     }
     @FXML
     public void giris_yap_tiklandi(ActionEvent event) throws Exception {

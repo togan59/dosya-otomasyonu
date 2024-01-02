@@ -1,26 +1,34 @@
 package com.example.dosyaotomasyonu;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+
 
 public class Belge extends File {
     private String belgeAdi;
     private String belgeTuru;
+
+    private String belgePath;
 
     public Belge(String path) {
         super(path);
         this.belgeAdi = this.getName();
         // Dosya uzantısını almak için
         this.belgeTuru = this.getName().substring(this.getName().lastIndexOf(".")+1);
+        this.belgePath = path;
+        Belgeler.belgeEkle(this);
     }
 
     // Getter Metodları
     public String getBelgeAdi() {
-        return belgeAdi;
+        return this.belgeAdi;
     }
 
     public String getBelgeTuru() {
-        return belgeTuru;
+        return this.belgeTuru;
     }
+
+    public String getPath() {return this.belgePath;}
 
 }
 
