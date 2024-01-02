@@ -3,7 +3,7 @@ package com.example.dosyaotomasyonu;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Belgeler extends ArrayList<Belge>{
+public class Belgeler extends ArrayList<Belge> implements Serializable{
     private static Belgeler instance = null;
 
     private Belgeler() {

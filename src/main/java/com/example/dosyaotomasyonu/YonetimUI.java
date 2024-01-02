@@ -58,9 +58,10 @@ public class YonetimUI {
     }
 
     @FXML
-    void arsivSil(ActionEvent event) {
+    void arsivSil(ActionEvent event) throws IOException {
         Arsivler.getInstance().arsivSil(secilenArsiv);
         arsivListe.remove(secilenArsiv.getArsivAdi());
+        Data.getInstance().kaydet();
     }
 
     @FXML
@@ -74,9 +75,10 @@ public class YonetimUI {
     }
 
     @FXML
-    void kullaniciSil(ActionEvent event) {
+    void kullaniciSil(ActionEvent event) throws IOException {
         KullaniciListesi.getInstance().kullaniciSil(secilenKullanici);
         kullaniciListe.remove(secilenKullanici.getKullaniciAdi());
+        Data.getInstance().kaydet();
     }
 
     @FXML

@@ -1,22 +1,22 @@
 package com.example.dosyaotomasyonu;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 
 
-public class Belge extends File {
+public class Belge extends File implements Serializable {
     private String belgeAdi;
     private String belgeTuru;
 
     private String belgePath;
 
-    public Belge(String path) {
+    public Belge(String path) throws IOException {
         super(path);
         this.belgeAdi = this.getName();
         // Dosya uzantısını almak için
         this.belgeTuru = this.getName().substring(this.getName().lastIndexOf(".")+1);
         this.belgePath = path;
         Belgeler.belgeEkle(this);
+        Data.getInstance().kaydet();
     }
 
     // Getter Metodları

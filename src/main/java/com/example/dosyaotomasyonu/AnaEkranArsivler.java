@@ -55,7 +55,7 @@ public class AnaEkranArsivler extends AnaEkranUI {
     }
 
     @FXML
-    void belgeEkle(ActionEvent event) {
+    void belgeEkle(ActionEvent event) throws IOException {
         // Belge ekleme ekranına geçiş
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Belge Ekle");
@@ -65,6 +65,7 @@ public class AnaEkranArsivler extends AnaEkranUI {
             if (arsiv.getArsivAdi().equals(arsivListe.getSelectionModel().getSelectedItem())) {
                 arsiv.belgeEkle(belge);
                 belgeListesi.add(belge.getBelgeAdi());
+                Data.getInstance().kaydet();
             }
         }
     }

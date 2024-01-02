@@ -12,7 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -54,72 +54,27 @@ public class Giris {
     private TextField yeniSifreGiris;
 
     private ObjectProperty<Kullanici> kullanici = new SimpleObjectProperty<>();
-    private KullaniciListesi kullanicilar = KullaniciListesi.getInstance();
-    private Arsivler arsivler = Arsivler.getInstance();
 
-    private Belgeler belgeler = Belgeler.getInstance();
+    public Giris() throws IOException, ClassNotFoundException {
+    }
 
     @FXML
-    public void initialize() {
-        // Kullanıcılar
-        Calisan calisan1 = new Calisan("Kadir", "Atabay", "sqlcikadir", "sql23", "sqlci23@mail.com", "5123456723", new ArrayList<Arsiv>());
-        Calisan calisan2 = new Calisan("Tolga", "AI", "tensorTolga", "taitai", "ccctolgaccc@mail.com", "5123456707", new ArrayList<Arsiv>());
-        Yonetici yonetici = new Yonetici("Hamza", "Gündoğdu", "HamzaBey", "java", "javabenimisim@mail.com", "5121212121");
-
-        // Belgeler
-        Belge belge1 = new Belge("src/main/resources/belgeler/dilekce.doc");
-        Belge belge2 = new Belge("src/main/resources/belgeler/duyuru.pdf");
-        Belge belge3 = new Belge("src/main/resources/belgeler/gelirler.xls");
-        Belge belge4 = new Belge("src/main/resources/belgeler/giderler.xls");
-        Belge belge5 = new Belge("src/main/resources/belgeler/intro.mp4");
-        Belge belge6 = new Belge("src/main/resources/belgeler/konusma.doc");
-        Belge belge7 = new Belge("src/main/resources/belgeler/logo.png");
-        Belge belge8 = new Belge("src/main/resources/belgeler/rapor.doc");
-        Belge belge9 = new Belge("src/main/resources/belgeler/web.js");
-        Belge belge10 = new Belge("src/main/resources/belgeler/sunum.ppt");
-
-        // Arşivler
-
-        Arsiv arsiv1 = new Arsiv("Mali İşler");
-        arsiv1.belgeEkle(belge3);
-        arsiv1.belgeEkle(belge4);
-
-        Arsiv arsiv2 = new Arsiv("İnsan Kaynakları");
-        arsiv2.belgeEkle(belge1);
-        arsiv2.belgeEkle(belge2);
-        arsiv2.belgeEkle(belge3);
-        arsiv2.belgeEkle(belge4);
-        arsiv2.belgeEkle(belge5);
-
-        Arsiv arsiv3 = new Arsiv("Yazılım");
-        arsiv3.belgeEkle(belge8);
-        arsiv3.belgeEkle(belge9);
-        arsiv3.belgeEkle(belge10);
-
-        // Arsi̇vleri̇ Çalışanlara Eşleştirme
-
-        calisan1.arsivEkle(arsiv1);
-        calisan1.arsivEkle(arsiv2);
-
-        calisan2.arsivEkle(arsiv3);
-
-        kullanicilar.add(calisan1);
-        kullanicilar.add(calisan2);
-        kullanicilar.add(yonetici);
-
+    public void initialize() throws IOException, ClassNotFoundException {
+        Data data = Data.getInstance();
+        data.yukle();
     }
     @FXML
     public void giris_yap_tiklandi(ActionEvent event) throws Exception {
         String kullaniciAdi = kullaniciAdiGiris.getText();
         String sifre = sifreGiris.getText();
-        if (kullanicilar.authonticate(kullaniciAdi, sifre)) {
+        if (KullaniciListesi.getInstance().authonticate(kullaniciAdi, sifre)) {
+            AktifKullanici aktifKullanici = AktifKullanici.setInstance(KullaniciListesi.getInstance().get(kullaniciAdi));
             // Yonetici veya çalışan
-            if (kullanicilar.get(kullaniciAdi) instanceof Yonetici) {
+            if (KullaniciListesi.getInstance().get(kullaniciAdi) instanceof Yonetici) {
                 setAnaEkranYonetici();
             } else {
                 setAnaEkranCalisan();
             }
-            AktifKullanici aktifKullanici = AktifKullanici.getInstance(kullanicilar.get(kullaniciAdi));
         } else {
             giris_yap_hata.setText("Kullanıcı adı veya şifre hatalı!");
         }
@@ -142,7 +97,7 @@ public class Giris {
         stage.show();
     }
     @FXML
-    public void kayit_ol_tiklandi(ActionEvent event){
+    public void kayit_ol_tiklandi(ActionEvent event) throws IOException {
         String ad = adGiris.getText();
         String soyad = soyadGiris.getText();
         String kullaniciAdi = yeniKullaniciAdiGiris.getText();
@@ -152,14 +107,15 @@ public class Giris {
         if (ad==null || soyad==null || kullaniciAdi==null || sifre==null || eposta==null || telefon==null ) {
             kayit_ol_hata.setText("Lütfen tüm alanları doldurunuz");
         }else {
-            if (kullanicilar.contains(kullaniciAdi)) {
+            if (KullaniciListesi.getInstance().contains(kullaniciAdi)) {
                 kayit_ol_hata.setText("Bu kullanıcı adı alınmış");
             } else if (sifre.length() < 4) {
                 kayit_ol_hata.setText("Sifre en az 4 karakter uzunluğunda olmalıdır");
             } else {
                 Kullanici yeniKullanici = new Kullanici(ad, soyad, kullaniciAdi, sifre, eposta, telefon, new ArrayList<Arsiv>());
-                kullanicilar.add(yeniKullanici);
+                KullaniciListesi.getInstance().add(yeniKullanici);
                 kayit_ol_hata.setText("Kayit işlemi başarılı, giriş yapabilirsiniz.");
+                Data.getInstance().kaydet();
             }
         }
     }

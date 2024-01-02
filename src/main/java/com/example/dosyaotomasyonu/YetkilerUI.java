@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class YetkilerUI {
 
     @FXML
@@ -61,8 +63,9 @@ public class YetkilerUI {
     }
 
     @FXML
-    void cikis(ActionEvent event) {
+    void cikis(ActionEvent event) throws IOException {
         // YetkilerUI'dan çıkış yapılacak.
+        Data.getInstance().kaydet();
         ((Stage) cikis_buton.getScene().getWindow()).close();
     }
 

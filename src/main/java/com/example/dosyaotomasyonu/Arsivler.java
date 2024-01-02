@@ -1,8 +1,9 @@
 package com.example.dosyaotomasyonu;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Arsivler extends ArrayList<Arsiv> {
+public class Arsivler extends ArrayList<Arsiv> implements Serializable {
     private static Arsivler instance = null;
 
     private Arsivler() {

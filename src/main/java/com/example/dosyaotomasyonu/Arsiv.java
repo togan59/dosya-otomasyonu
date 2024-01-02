@@ -1,15 +1,17 @@
 package com.example.dosyaotomasyonu;
 
+import java.io.*;
 import java.util.ArrayList;
 
-public class Arsiv {
+public class Arsiv implements Serializable {
     private String arsivAdi;
     private ArrayList<Belge> belgeler;
 
-    public Arsiv(String arsivAdi) {
+    public Arsiv(String arsivAdi) throws IOException {
         this.arsivAdi = arsivAdi;
         this.belgeler = new ArrayList<Belge>();
         Arsivler.arsivEkle(this);
+        Data.getInstance().kaydet();
     }
 
     // Getter ve Setter Metodları

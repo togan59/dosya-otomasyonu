@@ -1,23 +1,20 @@
 package com.example.dosyaotomasyonu;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AktifKullanici extends Kullanici {
     private static AktifKullanici instance = null;
 
-    private AktifKullanici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon, ArrayList<Arsiv> arsivler) {
-        super(ad, soyad, kullaniciAdi, sifre, eposta, telefon, arsivler);
+    private AktifKullanici(String ad, String soyad, String kullaniciAdi, String eposta, String telefon, ArrayList<Arsiv> arsivler) throws IOException {
+        super(ad, soyad, kullaniciAdi, eposta, telefon, arsivler);
     }
 
-    public static AktifKullanici getInstance(Kullanici kullanici) {
+    public static AktifKullanici setInstance(Kullanici kullanici) throws IOException {
         if (instance == null) {
-            instance = new AktifKullanici(kullanici.getAd(), kullanici.getSoyad(), kullanici.getKullaniciAdi(), kullanici.getSifre(), kullanici.getEposta(), kullanici.getTelefon(), kullanici.getArsivler());
+            instance = new AktifKullanici(kullanici.getAd(), kullanici.getSoyad(), kullanici.getKullaniciAdi(), kullanici.getEposta(), kullanici.getTelefon(), kullanici.getArsivler());
         }
         return instance;
-    }
-
-    public static void setInstance(Kullanici kullanici) {
-        instance = new AktifKullanici(kullanici.getAd(), kullanici.getSoyad(), kullanici.getKullaniciAdi(), kullanici.getSifre(), kullanici.getEposta(), kullanici.getTelefon(), kullanici.getArsivler());
     }
 
 
@@ -42,12 +39,4 @@ public class AktifKullanici extends Kullanici {
     public static ArrayList<Arsiv> returnArsivler() {
         return instance.getArsivler();
     }
-
-
-
-
-
-
-
-
 }

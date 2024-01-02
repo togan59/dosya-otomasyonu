@@ -1,8 +1,9 @@
 package com.example.dosyaotomasyonu;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class KullaniciListesi extends ArrayList<Kullanici>{
+public class KullaniciListesi extends ArrayList<Kullanici> implements Serializable {
     private static KullaniciListesi instance = null;
     private KullaniciListesi() {
         super();
@@ -60,5 +61,4 @@ public class KullaniciListesi extends ArrayList<Kullanici>{
         }
         return null;
     }
-
 }

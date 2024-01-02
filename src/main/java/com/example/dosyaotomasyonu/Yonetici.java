@@ -1,9 +1,11 @@
 package com.example.dosyaotomasyonu;
 
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Yonetici extends Kullanici{
-    public Yonetici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon) {
+public class Yonetici extends Kullanici implements Serializable {
+    public Yonetici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon ) throws IOException {
         super(ad, soyad, kullaniciAdi, sifre, eposta, telefon);
         this.setArsivler(Arsivler.getInstance());
     }

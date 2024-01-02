@@ -20,7 +20,7 @@
             <Font name="FreeSans" size="13.0" />
          </font>
       </TextField>
-      <TextField fx:id="yeniSifreGiris" layoutX="58.0" layoutY="212.0" prefHeight="26.0" prefWidth="200.0" promptText="Şifre" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+      <TextField fx:id="sifreGiris" layoutX="58.0" layoutY="212.0" prefHeight="26.0" prefWidth="200.0" promptText="Şifre" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
          <font>
             <Font name="FreeSans" size="13.0" />
          </font>

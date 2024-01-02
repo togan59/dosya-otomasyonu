@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class ArsivEkleUI {
 
     @FXML
@@ -14,11 +16,12 @@ public class ArsivEkleUI {
     private Button kaydetButon;
 
     @FXML
-    void kaydet(ActionEvent event) {
+    void kaydet(ActionEvent event) throws IOException {
         String arsivAdi = this.arsivAdi.getText();
         Arsiv arsiv = new Arsiv(arsivAdi);
         YonetimUI.arsivListe.add(arsivAdi);
         ((Button)event.getSource()).getScene().getWindow().hide();
+        Data.getInstance().kaydet();
     }
 
 }

@@ -1,8 +1,9 @@
 package com.example.dosyaotomasyonu;
 
+import java.io.*;
 import java.util.ArrayList;
 
-public class Kullanici {
+public class Kullanici implements Serializable {
     private String kullaniciAdi;
     private String sifre;
     private String ad;
@@ -11,7 +12,7 @@ public class Kullanici {
     private String telefon;
     private ArrayList<Arsiv> arsivler;
 
-    public Kullanici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon, ArrayList<Arsiv> arsivler) {
+    public Kullanici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon, ArrayList<Arsiv> arsivler) throws IOException {
         this.ad = ad;
         this.soyad = soyad;
         this.kullaniciAdi = kullaniciAdi;
@@ -19,6 +20,8 @@ public class Kullanici {
         this.eposta = eposta;
         this.telefon = telefon;
         this.arsivler = arsivler;
+        KullaniciListesi.getInstance().kullaniciEkle(this);
+        Data.getInstance().kaydet();
     }
 
     public Kullanici(String kullaniciAdi, String sifre) {
@@ -26,14 +29,25 @@ public class Kullanici {
         this.sifre = sifre;
     }
 
-    public Kullanici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon) {
+    public Kullanici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon) throws IOException {
         this.ad = ad;
         this.soyad = soyad;
         this.kullaniciAdi = kullaniciAdi;
         this.sifre = sifre;
         this.eposta = eposta;
         this.telefon = telefon;
-        this.arsivler = new ArrayList<Arsiv>();
+        this.arsivler = Arsivler.getInstance();
+        KullaniciListesi.getInstance().kullaniciEkle(this);
+        Data.getInstance().kaydet();
+    }
+
+    public Kullanici(String ad, String soyad, String kullaniciAdi, String eposta, String telefon, ArrayList<Arsiv> arsivler) {
+        this.ad = ad;
+        this.soyad = soyad;
+        this.kullaniciAdi = kullaniciAdi;
+        this.eposta = eposta;
+        this.telefon = telefon;
+        this.arsivler = arsivler;
     }
 
     // Getters
