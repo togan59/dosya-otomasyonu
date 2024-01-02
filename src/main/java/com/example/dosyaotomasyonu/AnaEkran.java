@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AnaEkran {
+    // Ana ekran üzerinden türeyen diğer ekranlar için kullanılan constructor
     public AnaEkran(String sceneFxml) throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource(sceneFxml));

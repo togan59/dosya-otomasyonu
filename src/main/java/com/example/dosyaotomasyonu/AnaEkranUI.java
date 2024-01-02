@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+// Ana ekran UI controller
 public class AnaEkranUI {
 
     @FXML

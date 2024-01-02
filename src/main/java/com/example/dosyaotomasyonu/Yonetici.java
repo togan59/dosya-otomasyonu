@@ -2,7 +2,6 @@ package com.example.dosyaotomasyonu;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Yonetici extends Kullanici implements Serializable {
     public Yonetici(String ad, String soyad, String kullaniciAdi, String sifre, String eposta, String telefon ) throws IOException {

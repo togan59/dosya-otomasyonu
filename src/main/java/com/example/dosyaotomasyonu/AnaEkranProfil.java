@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 
 import java.io.IOException;
 
+// Ana ekran üzerinde profil sekmesi için kullanılan controller
 public class AnaEkranProfil extends AnaEkranUI {
 
     @FXML
@@ -34,7 +35,6 @@ public class AnaEkranProfil extends AnaEkranUI {
     void arsivler_tiklandi(ActionEvent event) throws IOException {
         super.arsivler_tiklandi(event);
     }
-
     @FXML
     void profil_tiklandi(ActionEvent event) throws IOException{
         super.profil_tiklandi(event);

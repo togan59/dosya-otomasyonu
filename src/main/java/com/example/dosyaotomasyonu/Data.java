@@ -3,15 +3,14 @@ package com.example.dosyaotomasyonu;
 import java.io.*;
 
 public class Data {
-
     private KullaniciListesi kullanicilar = KullaniciListesi.getInstance();
     private Arsivler arsivler = Arsivler.getInstance();
     private Belgeler belgeler = Belgeler.getInstance();
 
+    // Singleton Design Pattern
     private static Data instance = null;
 
     private Data() {
-
     }
 
     public static Data getInstance() {

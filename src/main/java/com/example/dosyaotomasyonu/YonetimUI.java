@@ -47,7 +47,6 @@ public class YonetimUI {
     static ObservableList<String> arsivListe = FXCollections.observableArrayList();
     static ObservableList<String> kullaniciListe = FXCollections.observableArrayList();
 
-
     @FXML
     void arsivEkle(ActionEvent event) throws Exception {
         Stage stage = new Stage();
@@ -56,7 +55,6 @@ public class YonetimUI {
         stage.setScene(new Scene(root, 400, 150));
         stage.show();
     }
-
     @FXML
     void arsivSil(ActionEvent event) throws IOException {
         Arsivler.getInstance().arsivSil(secilenArsiv);

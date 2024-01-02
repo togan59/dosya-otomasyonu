@@ -60,6 +60,7 @@ public class Giris {
 
     @FXML
     public void initialize() throws IOException, ClassNotFoundException {
+        // Kayıtlı uygulama verilerini yükle
         Data data = Data.getInstance();
         data.yukle();
     }
@@ -69,7 +70,7 @@ public class Giris {
         String sifre = sifreGiris.getText();
         if (KullaniciListesi.getInstance().authonticate(kullaniciAdi, sifre)) {
             AktifKullanici aktifKullanici = AktifKullanici.setInstance(KullaniciListesi.getInstance().get(kullaniciAdi));
-            // Yonetici veya çalışan
+            // Yonetici veya çalışan için farklı ekran açılıyor
             if (KullaniciListesi.getInstance().get(kullaniciAdi) instanceof Yonetici) {
                 setAnaEkranYonetici();
             } else {
@@ -79,6 +80,7 @@ public class Giris {
             giris_yap_hata.setText("Kullanıcı adı veya şifre hatalı!");
         }
     }
+
     public void setAnaEkranCalisan() throws Exception {
         // giris ekranını kapat
         ((Stage)giris_yap.getScene().getWindow()).close();

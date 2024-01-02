@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class AktifKullanici extends Kullanici {
+
+    // Singleton Design Pattern
     private static AktifKullanici instance = null;
 
     private AktifKullanici(String ad, String soyad, String kullaniciAdi, String eposta, String telefon, ArrayList<Arsiv> arsivler) throws IOException {
@@ -17,7 +19,7 @@ public class AktifKullanici extends Kullanici {
         return instance;
     }
 
-
+    // Getters
     public static String returnAd() {
         return instance.getAd();
     }

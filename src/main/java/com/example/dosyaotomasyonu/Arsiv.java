@@ -35,5 +35,4 @@ public class Arsiv implements Serializable {
     public void belgeSil(Belge belge) {
         this.belgeler.remove(belge);
     }
-
 }

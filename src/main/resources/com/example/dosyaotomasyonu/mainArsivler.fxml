@@ -38,19 +38,7 @@
                         <Font name="FreeSans" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="belgeBilgiButon" contentDisplay="GRAPHIC_ONLY" layoutX="406.0" layoutY="49.0" mnemonicParsing="false" onAction="#belgeBilgi" style="-fx-background-color: #dddddd;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icon/info.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="FreeSans" size="13.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="belgeSilButon" contentDisplay="GRAPHIC_ONLY" layoutX="459.0" layoutY="49.0" mnemonicParsing="false" onAction="#belgeSil" style="-fx-background-color: #dddddd;">
+                  <Button fx:id="belgeSilButon" contentDisplay="GRAPHIC_ONLY" layoutX="407.0" layoutY="49.0" mnemonicParsing="false" onAction="#belgeSil" style="-fx-background-color: #dddddd;">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>

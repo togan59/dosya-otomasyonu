@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
+// Ana ekran üzerinde arşivler sekmesi için kullanılan controller
 public class AnaEkranArsivler extends AnaEkranUI {
     @FXML
     private Button arsivlerButon;
@@ -32,9 +33,6 @@ public class AnaEkranArsivler extends AnaEkranUI {
     private ListView<String> belgeler;
 
     @FXML
-    private Button belgeBilgiButon;
-
-    @FXML
     private Button belgeEkleButon;
 
     @FXML
@@ -48,11 +46,6 @@ public class AnaEkranArsivler extends AnaEkranUI {
 
     @FXML
     private Label belgeTuru;
-
-    @FXML
-    void belgeBilgi(ActionEvent event) {
-
-    }
 
     @FXML
     void belgeEkle(ActionEvent event) throws IOException {

@@ -3,6 +3,7 @@ package com.example.dosyaotomasyonu;
 import java.io.*;
 import java.util.ArrayList;
 
+// Serialization
 public class Kullanici implements Serializable {
     private String kullaniciAdi;
     private String sifre;

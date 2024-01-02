@@ -6,7 +6,6 @@ import java.io.*;
 public class Belge extends File implements Serializable {
     private String belgeAdi;
     private String belgeTuru;
-
     private String belgePath;
 
     public Belge(String path) throws IOException {

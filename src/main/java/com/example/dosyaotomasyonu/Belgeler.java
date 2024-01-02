@@ -3,6 +3,9 @@ package com.example.dosyaotomasyonu;
 import java.io.*;
 import java.util.ArrayList;
 
+// Belgeleri depolayan sınıf
+// Singleton Design Pattern
+// Serialization
 public class Belgeler extends ArrayList<Belge> implements Serializable{
     private static Belgeler instance = null;
 
