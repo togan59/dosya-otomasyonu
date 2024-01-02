@@ -45,6 +45,7 @@ public class YetkilerUI {
             if (arsiv.getArsivAdi().equals(arsivAdi)) {
                 YonetimUI.secilenKullanici.arsivEkle(arsiv);
                 arsivYetkileri_liste.add(arsivAdi);
+                yetkiEkle_secim.getItems().remove(arsivAdi);
                 break;
             }
         }
@@ -57,6 +58,7 @@ public class YetkilerUI {
             if (arsiv.getArsivAdi().equals(arsivAdi)) {
                 YonetimUI.secilenKullanici.arsivSil(arsiv);
                 arsivYetkileri_liste.remove(arsivAdi);
+                yetkiEkle_secim.getItems().add(arsivAdi);
                 break;
             }
         }
